@@ -95,7 +95,7 @@ header {
   padding: 0;}
 
 #logo h1 { 
-  font: normal 450% 'Jenna Sue', arial, sans-serif;
+  font: normal 450% Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
   padding: 6px 0 0 20px;}
 
 #logo h1 a:hover { 
@@ -123,13 +123,15 @@ header {
   padding: 2px 0 2px 28px;
   line-height: 1.5em;}
 
-#right_content { 
+#map-container { 
   float: right;
   width: 450px;
-  padding: 0;
+  padding: 20px 0 5px 25px;
   min-height: 450px;}
 
-#right_content img { 
+#map { 
+  height: 374px;
+  width: 374px;		
   float: left;}
 
 footer { 
@@ -378,7 +380,7 @@ ul#nav ul {
 
 ul#nav li a { 
   padding: 3px 25px 6px 25px;
-  font: 170% 'News Cycle', arial, sans-serif;
+  font: 170% Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
   text-decoration: none;
   margin-right: 2px;
 }

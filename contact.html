@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>PhotoArtWork2_reverse</title>
+  <title>Contact Nora</title>
   <meta name="description" content="website description" />
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -11,6 +11,15 @@
   <link href="css/colour.css" rel="stylesheet" type="text/css" />
   <!-- modernizr enables HTML5 elements and feature detects -->
   <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+  
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  
+	<!-- Load Leaflet from CDN-->
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.js"></script>
+
+	<!-- Load Esri Leaflet locally, after cloning this repository -->
+	<script src="http://cdn.jsdelivr.net/leaflet.esri/2.0.0-beta.5/esri-leaflet.js"></script>
 </head>
 
 <body>
@@ -50,10 +59,37 @@
           </div>
         </form>
       </div>
-      <div id="right_content">
-        <img src="images/contact.jpg" width="450" height="450" title="contact" alt="contact" />
-      </div>
-    </div>
+	  <div id="map-container">
+		<div id='map'>
+			<script type="text/javascript">
+			var map = L.map('map').setView([44.562343, -123.262790], 11);
+			L.esri.basemapLayer('NationalGeographic').addTo(map);
+			//L.esri.basemapLayer('DarkGrayLabels').addTo(map);
+			map.locate();
+			map.on('locationfound', onLocationFound);
+
+			var greenIcon = L.icon({
+			iconUrl: 'images/leaf-green.png',
+			shadowUrl: 'images/leaf-shadow.png',
+			iconSize:     [38, 95], // size of the icon
+			shadowSize:   [50, 64], // size of the shadow
+			iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+			shadowAnchor: [4, 62],  // the same for the shadow
+			popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+			});
+			
+			var me = L.marker([44.562343, -123.262790], {icon: greenIcon}).bindPopup("Here I am!!").addTo(map);
+			
+			function onLocationFound(e) {
+			// create a marker at the users "latlng" and add it to the map
+			map.setView([44.562343, -123.262790], 16)
+			me.addTo(map)
+			}
+
+			</script>
+		</div>
+	  </div>  
+
     <!-- end content -->
 
     <!-- begin footer -->
@@ -68,6 +104,7 @@
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
   <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <!-- <script type="text/javascript" src='js/work.js'></script> -->
   <!-- initialise sooperfish menu -->
   <script type="text/javascript">
     $(document).ready(function() {
