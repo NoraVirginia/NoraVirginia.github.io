@@ -7,7 +7,7 @@ h2, h6 {
   color: #07E5F9;}
 
 a, a:hover { 
-  color: #e12105;}
+  color: #FFF;}
 
 #site_content { 
   background: #333;}
@@ -16,10 +16,10 @@ a, a:hover {
   background: url(../images/dark_bullet.png) no-repeat left center;}
 
 nav, footer {
-  background: #003300; /* Show a solid color for older browsers */
-  background: -moz-linear-gradient(#555, #333);
-  background: -o-linear-gradient(#555, #333);
-  background: -webkit-linear-gradient(#003300, #000000);
+  background: #b0a2a2; /* Show a solid color for older browsers */
+  background: -moz-linear-gradient(#b0a2a2, #cbffcb);
+  background: -o-linear-gradient(#b0a2a2, #cbffcb);
+  background: -webkit-linear-gradient(#b0a2a2, #cbffcb);
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
@@ -65,7 +65,7 @@ ul#nav ul li a {
   color: #FFF;}
 
 ul#nav li.selected a, ul#nav li a:hover, ul#nav ul li a:hover, ul#nav ul li a:focus, ul#nav li.selected ul a:hover { 
-  color: #e12105;}
+  color: #580000;}
 
 a.thumb, ul.thumbs li.selected a.thumb {
   background: #FFF;}
@@ -83,9 +83,9 @@ div.pagination span.current {
   color: #FFF;}
 
 h1, h3, h4, h5, a:hover, #logo h1, #logo h1 a:hover, 
-footer a, #slideshow-caption p, .form_settings input, .form_settings textarea,
+footer a, .form_settings input, .form_settings textarea,
 #blog_container h4, .blog h2, ul#nav li.selected ul a, div.image-title { 
-  color: #FFF;}
+  color: #580000;}
 
 div.navigation a.prev {
   background: url(../images/prev_arrow_white.gif) no-repeat left;}
