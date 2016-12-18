@@ -72,7 +72,7 @@ header {
   color: #d9a042;
 }
 header .container {
-  padding-top: 100px;
+  padding-top: 200px;
   padding-bottom: 50px;
 }
 header img {
@@ -184,7 +184,7 @@ header .intro-text .skills {
   }
 }
 section {
-  padding: 100px 0;
+  padding: 47px 0;
 }
 section h2 {
   margin: 0;
